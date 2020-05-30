@@ -89,7 +89,7 @@ class DiBuContainer extends StatelessWidget {
                   width: 5.0,
                 ),
                 bottom: BorderSide(
-                  color: Colors.green,
+                  color: Colors.red,
                   width: 5.0,
                 ),
                 right: BorderSide(
