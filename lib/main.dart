@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent ,
+      backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         title: Text('My first app'),
         centerTitle: false,
@@ -24,11 +24,9 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -36,28 +34,31 @@ class Home extends StatelessWidget {
               child: Text(
                 'Here is a random number between 0 and 15.',
                 style: TextStyle(
-                  fontSize: 20.0,fontWeight: FontWeight.bold ,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
                   letterSpacing: 2.0,
                   color: Colors.indigo,
                 ),
               ),
             ),
             Center(
-              child: Text('12',style: TextStyle(
-                fontSize: 60.0,fontWeight: FontWeight.bold ,
-                color: Colors.white,
-              ),
+              child: Text(
+                '12',
+                style: TextStyle(
+                  fontSize: 60.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
             Center(
-              child: FlatButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context){
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return DiBuContainer();
-                  }
-                  ));
+                  }));
                 },
-                color: Colors.white,
+                // color: Colors.white,
                 child: Text('PREVIOUS'),
               ),
             ),
@@ -65,14 +66,12 @@ class Home extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+          onPressed: () {},
           backgroundColor: Colors.greenAccent,
-        child: Icon(
-          Icons.mail,
-          color: Colors.white,
-
-        )
-      ),
+          child: Icon(
+            Icons.mail,
+            color: Colors.white,
+          )),
     );
   }
 }
